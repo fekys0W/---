@@ -1,21 +1,77 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 
 int main()
 {
     string a;
-    int f[16], pp = 0, i = 1;
     cin >> a;
-    if (a.size() >= 8){
-        pp += 1;
-    }else{
+    short int size = 0, symbol1 = 0, symbol2 = 0, symbol3 = 0, number = 0;
+     if (a.size() >= 8){
+        size++;
+     }
+     for(char f = 33; f <= 47; f++){
+         for(int f1 = 0; f1 < a.size(); f1++){
+             if (a[f1] == f){
+                 symbol1++;
+             }
+         }
+     }
+     for(char f = 58; f <= 64; f++){
+         for(int f1 = 0; f1 < a.size(); f1++){
+             if (a[f1] == f){
+                 symbol1++;
+             }
+         }
+     }
+     for(char f = 91; f <= 96; f++){
+         for(int f1 = 0; f1 < a.size(); f1++){
+             if (a[f1] == f){
+                 symbol1++;
+             }
+         }
+     }
+     for(char f = 123; f <= 126; f++){
+         for(int f1 = 0; f1 < a.size(); f1++){
+             if (a[f1] == f){
+                 symbol1++;
+             }
+         }
+     }
+     for(char f = 65; f <= 90; f++){
+         for(int f1 = 0; f1 < a.size(); f1++){
+             if (a[f1] == f){
+                 symbol2++;
+             }
+         }
+     }
+     for(char f = 97; f <= 122; f++){
+         for(int f1 = 0; f1 < a.size(); f1++){
+             if (a[f1] == f){
+                 symbol3++;
+             }
+         }
+     }
+     for(char f = 48; f <= 57; f++){
+         for(int f1 = 0; f1 < a.size(); f1++){
+             if (a[f1] == f){
+                 number++;
+             }
+         }
+     }
+     if(!size){
         cout << "less than 8 characters" << endl;
-    }
-    while (i < a.size()){
-        f += a.at(i);
-        i += 1;
-    }
-    cout << a.at(1);
-    
+     }
+     if(!symbol1){
+         cout << "no special characters" << endl;
+     }
+     if(!symbol2){
+         cout << "no capital letters" << endl;
+     }
+     if(!symbol3){
+         cout << "no lowercase letters" << endl;
+     }
+     if(!number){
+        cout << "no numbers" << endl;
+     }
 }
