@@ -108,6 +108,7 @@ int main(){
             if (action == 3 and kk <= 0){
                 cout << "You are not registered yet." << endl << endl;
                 cout << "What are you gonna do?" << endl << "1. Log off" << endl <<  "2. Register" << endl << "Action ..... " << endl << endl;
+                continue;
             }
         }
             if (logins[0] == logins[1] and passwords[0] == passwords[1]){
