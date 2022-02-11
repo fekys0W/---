@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    long long int a, sum;
+    vector<int> aa;
+    cin >> a;
+    for(int i = 0;i < a;i++){
+        sum = 0;
+       string c;
+       cin >> c;
+       if(c[2] == 'i'){
+           for(int k = 0;k < aa.size();k++){
+               cout << aa[k] << " " ;
+           }
+       }
+       if(c[2] == 's'){
+           long long int b;
+           cin >> b;
+           aa[i] = b;
+       }
+       if(c[2] == 'p'){
+           aa.pop_back();
+       }
+       if(c[2] == 'm'){
+           long long int a, w;
+           cin >> a >> w;
+           for(int j = a;j < w; j++){
+               sum += c[j];
+           }
+           aa[i] = sum;
+       }
+       if(c[2] == 'i'){
+           for(int k = 0;k < aa.size();k++){
+               cout << aa[k] << " " ;
+           }
+       }
+    }
+}
